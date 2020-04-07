@@ -1,0 +1,35 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A calculator in HTML and JS",
+  "main": "karma.conf.js",
+  "dependencies": {
+    "browserify": "^16.5.1",
+    "jasmine-core": "^3.5.0",
+    "karma": "^4.4.1",
+    "karma-browserify": "^7.0.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^3.1.1",
+    "watchify": "^3.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheOdinProject/Calculator.git"
+  },
+  "author": "Kyle Cusack",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/TheOdinProject/Calculator/issues"
+  },
+  "homepage": "https://github.com/TheOdinProject/Calculator#readme",
+  "directories": {
+    "doc": "doc"
+  }
+
+}
