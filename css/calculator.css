@@ -1,0 +1,130 @@
+body{
+  background-color: #b3d4fc;
+}
+#calcFrame{
+  height: 80vh;
+  width: 50vw;
+  vertical-align: middle;
+  margin: 10vh 25vw 10vh 25vw;
+  background-color: rgba(85, 85, 85, 0.37);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr ;
+  grid-template-rows: .05fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "displayBox displayBox displayBox displayBox historyHeader"
+    "displayBox displayBox displayBox displayBox historyBox"
+    "clearBox clearBox backspaceBox divisonBox historyBox"
+    "sevenBox eightBox nineBox multiplicationBox historyBox"
+    "fourBox fiveBox sixBox subtractionBox historyBox"
+    "oneBox twoBox threeBox additionBox historyBox"
+    ". zeroBox decimalBox equalBox historyBox";
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+.valueBox{
+  background-color: black;
+  color: white;
+  border: 1px outset rgb(149, 149, 149);
+
+}
+.operandBox{
+  background-color: #0054cc;
+  color: white;
+  border: 1px outset rgb(149, 149, 149);
+
+}
+
+
+#displayBox{
+  grid-area: displayBox;
+  background-color: #cccccc;
+  color: white;
+}
+#historyBox{
+  grid-area: historyBox;
+  background-color: #555555;
+  color: white;
+}
+#historyHeader{
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 5px solid black;
+}
+div.operandBox, div.valueBox{
+  transition: background-color .1s 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+
+}
+.operandBox > p, .valueBox > p{
+  font-size: 4vh;
+  margin: 0;
+  user-select: none;
+}
+.operandBox:hover{
+  background-color: red;
+}
+.valueBox:hover{
+  background-color: darkgreen;
+}
+
+#additionBox{
+  grid-area: additionBox;
+}
+#subtractionBox{
+  grid-area: subtractionBox;
+}
+#multiplicationBox{
+  grid-area: multiplicationBox;
+}
+#divisionBox{
+  grid-area: divisonBox;
+}
+#equalBox{
+  grid-area: equalBox;
+}
+#clearBox{
+  grid-area: clearBox;
+}
+#backspaceBox{
+  grid-area: backspaceBox;
+}
+#decimalBox{
+  grid-area: decimalBox;
+}
+#zeroBox{
+  grid-area: zeroBox;
+}
+#oneBox{
+  grid-area: oneBox;
+}
+#twoBox{
+  grid-area: twoBox;
+}
+#threeBox{
+  grid-area: threeBox;
+}
+#fourBox{
+  grid-area: fourBox;
+}
+#fiveBox{
+  grid-area: fiveBox;
+}
+#sixBox{
+  grid-area: sixBox;
+}
+#sevenBox{
+  grid-area: sevenBox;
+}
+#eightBox{
+  grid-area: eightBox;
+}
+#nineBox{
+  grid-area: nineBox;
+}
+
