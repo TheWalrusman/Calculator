@@ -115,16 +115,16 @@ function equalsOperation() {
       currentOperand = numericalExpressionComplete[i];
       switch (currentOperand) {
         case `+`:
-          numericalExpressionComplete[i-1] = rightHandValue + leftHandValue;
+          numericalExpressionComplete[i-1] = Number(rightHandValue) + Number(leftHandValue);
           break;
         case `-`:
-          numericalExpressionComplete[i-1] = rightHandValue - leftHandValue;
+          numericalExpressionComplete[i-1] = Number(rightHandValue) - Number(leftHandValue);
           break;
         case  `*`:
-          numericalExpressionComplete[i-1] = rightHandValue * leftHandValue;
+          numericalExpressionComplete[i-1] = Number(rightHandValue) * Number(leftHandValue);
           break;
         case  `/`:
-          numericalExpressionComplete[i-1] = rightHandValue / leftHandValue;
+          numericalExpressionComplete[i-1] = Number(rightHandValue) / Number(leftHandValue);
           break;
         default:
           document.getElementById(`errorDisplay`).innerText = errorEqualsUnknown;
