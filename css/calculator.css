@@ -45,12 +45,20 @@ body{
 #errorBox{
   grid-area: errorBox;
   background-color: #747474;
+
+}
+#errorDisplay{
   color: red;
+  font-size: 20px;
+  margin: 8px 0;
 }
 #displayBox{
   grid-area: displayBox;
   background-color: #cccccc;
   color: black;
+  font-size: 25px;
+  word-break: break-all;
+  text-align: right;
 }
 #historyBox{
   grid-area: historyBox;
