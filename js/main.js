@@ -1,5 +1,5 @@
 let displayArray = [];
-let validNumericExpressionRegex = /^([0-9]{1,}(\.?[0-9]{1,})?=$)|(([0-9]{1,}(\.?[0-9]{1,})?)([\/\*\-\+])*)(([0-9]{1,}(\.?[0-9]{1,})?)([\/\*\-\+])*)+\=$/gm;
+let validNumericExpressionRegex = /^([0-9]{1,10}(\.?[0-9]{1,10})?=$)|(([0-9]{1,10}(\.?[0-9]{1,10})?)([\/\*\-\+])*)(([0-9]{1,10}(\.?[0-9]{1,10})?)([\/\*\-\+])*)+\=$/gm;
 let invalidFloatRegex = /([0-9]*\.[0-9]*\.)/gm;
 let decimalAloneRegex = /([\/\*\-\+]\.)|(^\.)/gm;
 let floatMaxSizeRegex = /[0-9]+\.[0-9]{6,}/gm;
@@ -139,7 +139,7 @@ function equalsOperation() {
   answerNode.classList.add(`nodeAnswer`);
   let textNode = document.createTextNode(displayString);
   expressionNode.appendChild(textNode);
-  textNode = document.createTextNode(numericalExpressionComplete[0]);
+  textNode = document.createTextNode((numericalExpressionComplete[0]).toLocaleString(`fullwide`,{useGrouping:false}));
   answerNode.appendChild(textNode);
   logNode.appendChild(expressionNode);
   logNode.appendChild(answerNode);
@@ -187,3 +187,65 @@ equalsKey.addEventListener
 let clearHistoryKey = document.getElementById(`resetHistoryButton`);
 clearHistoryKey.addEventListener
 (`mouseup`, function(e){ clearHistory.call(this, e) },true  );
+
+document.addEventListener(`keyup`,function (event) {
+  switch (event.key) {
+    case  `0`:
+      document.getElementById(`zeroBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `1`:
+      document.getElementById(`oneBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `2`:
+      document.getElementById(`twoBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `3`:
+      document.getElementById(`threeBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `4`:
+      document.getElementById(`fourBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `5`:
+      document.getElementById(`fiveBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `6`:
+      document.getElementById(`sixBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `7`:
+      document.getElementById(`sevenBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `8`:
+      document.getElementById(`eightBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `9`:
+      document.getElementById(`nineBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `.`:
+      document.getElementById(`decimalBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `+`:
+      document.getElementById(`additionBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `-`:
+      document.getElementById(`subtractionBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `*`:
+      document.getElementById(`multiplicationBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `/`:
+      document.getElementById(`divisionBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `=`:
+      document.getElementById(`equalBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `Enter`:
+      document.getElementById(`equalBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `Backspace`:
+      document.getElementById(`backspaceBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+    case  `Delete`:
+      document.getElementById(`clearBox`).dispatchEvent( new MouseEvent(`mouseup`) );
+      break;
+  }
+});
