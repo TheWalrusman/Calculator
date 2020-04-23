@@ -64,12 +64,29 @@ body{
   grid-area: historyBox;
   background-color: #555555;
   color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  overflow: auto;
+}
+.historyEntry{
+  background-color: #2c2cff;
+  transition: background-color .1s 0s;
+  border-style: solid;
+  border-color: black;
+  word-break: break-all;
+  text-align: right;
 }
 #historyHeader{
   vertical-align: middle;
   text-align: center;
   font-size: 30px;
   border-bottom: 5px solid black;
+}
+#resetHistoryButton{
+  font-size: 18px;
+  user-select: none;
+  transition: background-color .1s 0s;
 }
 div.operandBox, div.valueBox, div.decimalClass{
   transition: background-color .1s 0s;
@@ -88,6 +105,12 @@ div.operandBox, div.valueBox, div.decimalClass{
   background-color: red;
 }
 .valueBox:hover, .decimalClass:hover{
+  background-color: darkgreen;
+}
+.historyEntry:hover{
+  background-color: darkgreen;
+}
+#resetHistoryButton:hover{
   background-color: darkgreen;
 }
 
